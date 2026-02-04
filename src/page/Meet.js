@@ -1,18 +1,24 @@
 import { useEffect, useRef, useState } from "react";
+import Left from "../component/LeftList";
+import Right from "../component/RightList";
+import Header from "../component/Header";
+import style from "../CSS/Meet.module.css";
 
 function Meet() {
 
   const [isHost, setIshost] = useState(true);
 
   return (
-    isHost ?
-      <div>
-        {/* 왼쪽 요소+ 오른쪽 요소 */}
+    <div className={style.Maindiv}>
+      <div className={style.Header}>
+        <Header />
       </div>
-      :
-      <div>
-
+      
+      <div className={style.Component}>
+        <Left />
+        <Right />
       </div>
+    </div>
   );
 }
 
